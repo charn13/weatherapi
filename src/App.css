@@ -1,0 +1,23 @@
+.main-cont{
+     
+    padding-top: 50px;
+    height: 450px;
+    background-image: url(https://tse2.mm.bing.net/th?id=OIP.hZ0i7tkLObbIPGX0pe_AIgHaE8&pid=Api&P=0&h=180);
+background-repeat: no-repeat;
+ background-size: cover; 
+color: beige;
+}
+.iput{
+    width: 25%;
+    margin: auto;
+}
+
+.tempc{
+    
+    width: 380px;
+    height: 400px;
+    color: black;
+    background-image:url(https://img.freepik.com/premium-vector/day-with-clouds-weather-app-screen-mobile-interface-design-forecast-weather-background-time-concept-vector-banner_87946-4137.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
