@@ -432,73 +432,118 @@ const audio =("../mp3/thunder-12.mp3")
 
        
 
-            <div className="container" >
-            <div className="row main-cont tempc" >
-            {console.log(allcities, "allcities")}
-                <div className="col-md-12">
-                <label htmlFor="exampleDataList" className="form-label">Search City</label>
-                <Select
+//             <div className="container tempc " >
+//             <div className="row main-cont" >
+//             {console.log(allcities, "allcities")}
+//                 <div className="col-md-12">
+//                 <label htmlFor="exampleDataList" className="form-label">Search City</label>
+//                 <Select
                 
-                        value={{ label: City, value: City }}
-                        onChange={handleChange}
-                        options={allcities.map((city) => ({ label: city, value: city,  }))}
-                        styles={customStyles} // Apply the custom styles
-                    />
-                </div>
-                <div className="row">
-                    <div className="col-md-12">
+//                         value={{ label: City, value: City }}
+//                         onChange={handleChange}
+//                         options={allcities.map((city) => ({ label: city, value: city,  }))}
+//                         styles={customStyles} // Apply the custom styles
+//                     />
+//                 </div>
+//                 <div className="row">
+//                     <div className="col-md-12">
               
                     
-                     <datalist id="datalistOptions">
-{console.log(allcities, "====")}
-                        {allcities.map((city, index)=> (
+//                      <datalist id="datalistOptions">
+// {console.log(allcities, "====")}
+//                         {allcities.map((city, index)=> (
                           
-                          <option key={index} value={city}>
-                          {city}
-                      </option>
+//                           <option key={index} value={city}>
+//                           {city}
+//                       </option>
 
-                        ))}
+//                         ))}
 
 
                         
                         
-                     </datalist>
+//                      </datalist>
                  
-                    </div>
-                    <div className="row">
-                        <div className="col-md-12">
-                        { !Temp ? ( 
-                    <p>No data found</p>
+//                     </div>
+//                     <div className="row">
+//                         <div className="col-md-12">
+//                         { !Temp ? ( 
+//                     <p>No data found</p>
                    
-                ) :( 
-                    <div className='clearfix'>
-                <div>
-                    <h2 className='text-center py-3'><i className="fa-solid fa-location-dot"></i> {City} {Math.round(Temp.temp)} <span><sup>o</sup>C</span>
-                    </h2>
-                    <div className=''>
-                    <img src={`http://openweathermap.org/img/wn/${Icon[0].icon}@2x.png`} alt='icon' className='d-block mx-auto'/>
-                    <p className='text-center ps-3' style={{marginTop:'-15px'}}>{Icon[0].main}</p>
-                    </div>
-                    <div className='text-center '>
-                    <p>Min Temp: {Temp.temp_min}<sup>o</sup>C | Max Temp: {Temp.temp_max}<sup>o</sup>C</p>
-                </div>
+//                 ) :( 
+//                     <div className='clearfix'>
+//                 <div>
+//                     <h2 className='text-center py-3'><i className="fa-solid fa-location-dot"></i> {City} {Math.round(Temp.temp)} <span><sup>o</sup>C</span>
+//                     </h2>
+//                     <div className=''>
+//                     <img src={`http://openweathermap.org/img/wn/${Icon[0].icon}@2x.png`} alt='icon' className='d-block mx-auto'/>
+//                     <p className='text-center ps-3' style={{marginTop:'-15px'}}>{Icon[0].main}</p>
+//                     </div>
+//                     <div className='text-center '>
+//                     <p>Min Temp: {Temp.temp_min}<sup>o</sup>C | Max Temp: {Temp.temp_max}<sup>o</sup>C</p>
+//                 </div>
                    
                    
                
                 
-                </div>
-                </div>
+//                 </div>
+//                 </div>
                 
                 
                
-                )
-                }
-                        </div>
-                    </div>
-                </div>
-            </div>
+//                 )
+//                 }
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
 
 
+// </div>
+<div className="container ">
+<div className="container main w-50 ">
+     <div className="row row1 mt-5 pt-5">
+     <label htmlFor="exampleDataList" className="form-label">Search City</label>
+                 <Select
+                
+                         value={{ label: City, value: City }}
+                         onChange={handleChange}
+                         options={allcities.map((city) => ({ label: city, value: city,  }))}
+                         styles={customStyles} // Apply the custom styles
+                     />
+                     
+                      <datalist id="datalistOptions">
+                            {console.log(allcities, "====")}
+                         {allcities.map((city, index)=> (
+                          
+                           <option key={index} value={city}>
+                           {city}
+                       </option>
+
+                         ))}
+                       
+                      </datalist>
+                      { !Temp ? ( 
+                     <p>No data found</p>
+                   
+                 ):( 
+                
+                      <div>
+                     <h2 className='text-center py-3'><i className="fa-solid fa-location-dot"></i> {City} {Math.round(Temp.temp)} <span><sup>o</sup>C</span>
+                     </h2>
+                    
+                     <img src={`http://openweathermap.org/img/wn/${Icon[0].icon}@2x.png`} alt='icon' className='d-block mx-auto'/>
+                     <p className='text-center ps-3' style={{marginTop:'-15px'}}>{Icon[0].main}</p>
+                     
+                     
+                     <h5 className='pt-5'>Min Temp: {Temp.temp_min}<sup>o</sup>C | Max Temp: {Temp.temp_max}<sup>o</sup>C</h5>
+                 
+                     </div>   
+                        
+                 )}    
+     </div>
+   
+</div>
 </div>
   )
 }
