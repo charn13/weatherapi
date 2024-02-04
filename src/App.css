@@ -3,10 +3,9 @@
       min-height: 550px;
   max-width: 400px;
   min-width: 350px;
-    background-image: url(https://media.giphy.com/media/3o7TKIoSZlFrOtaadO/source.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: black;
     margin: auto ;
+   
 }
 .tempc{
     margin: auto;
